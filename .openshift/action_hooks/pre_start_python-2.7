@@ -41,8 +41,8 @@ fi
 
 # Clone the repo if not already exists
 if [ ! -d ${VICTIMS_LOCAL_REPO} ]; then
-    echo "$LOG_PREFIX Cloning victims-web from $VICTIMS_GIT_URL"
-    git clone $VICTIMS_GIT_URL ${VICTIMS_LOCAL_REPO}
+    echo "$LOG_PREFIX Cloning victims-web branch $VICTIMS_GIT_BRANCH from $VICTIMS_GIT_URL"
+    git clone -b ${VICTIMS_GIT_BRANCH} $VICTIMS_GIT_URL ${VICTIMS_LOCAL_REPO}
 fi
 
 if [ -z ${SKIP_SWITCH} ]; then
